@@ -1,0 +1,13 @@
+<h2>Enter your user ID:</h2>
+<%=form_tag staticpages_index_path, method: :get do %>
+<%=text_field_tag :user, params[:user] %>
+<%=submit_tag "Search for user photos"%>
+<%end%>
+
+<%if @photos %>
+    <%= image_tag @photos %>
+
+<%end%>
+
+
+
